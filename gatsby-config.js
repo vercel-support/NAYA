@@ -7,7 +7,7 @@ module.exports = {
     author: `Hans Erling Klevstad`,
   },
   plugins: [
-    {
+    /* {
       resolve: "gatsby-source-wordpress",
       options: {
         url: process.env.WP_URL,
@@ -26,7 +26,7 @@ module.exports = {
           hardCacheData: false,
         },
       },
-    },
+    }, */
     {
       resolve: `gatsby-source-filesystem`,
       options: {
