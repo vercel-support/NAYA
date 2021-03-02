@@ -1,11 +1,8 @@
-import { graphql, StaticQuery } from "gatsby"
+import { StaticQuery } from "gatsby"
 import React from "react"
-import RecentPosts from "../components/blogpost/recent-posts"
 import Hero from "../components/hero"
 import MainLayout from "../components/layout"
-import IntroSection from "../components/section/intro"
 import SEO from "../components/seo"
-import ProductCarousel from "../components/shop/carousel"
 
 const IndexPage = () => {
   return (
@@ -13,18 +10,17 @@ const IndexPage = () => {
       query={query}
       render={data => {
         console.log(data)
-        const { hero, introsection, productShowcase:showcase } = data.wpPage
+        //const { hero, introsection, productShowcase:showcase } = data.file
         return (
           <MainLayout>
             <SEO title="NAYA" />
-           <Hero
+            <Hero
               hasText={true}
-              desktopImage={hero.heroimagedesktop.localFile}
-              mobileImage={hero.heroimagemobile.localFile}
-              title={hero.herotitle}
+              desktopImage={data.file}
+              title="Litt rydding, kommer mer snart!"
               fullHeight
-            />
-            {/*   <IntroSection
+            /> {/* 
+             <IntroSection
               title={introsection.introtitle}
               description={introsection.introdescription}
               image={introsection.introImage.localFile}
@@ -41,6 +37,18 @@ const IndexPage = () => {
 export default IndexPage
 
 const query = graphql`
+  query {
+    file(name: { eq: "header_home_desktop" }) {
+      childImageSharp {
+        fluid(maxWidth: 1920) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  }
+`
+/*
+ const query = graphql`
   query IndexQuery {
     wpPage(title: { eq: "Home" }) {
       title
@@ -97,4 +105,4 @@ const query = graphql`
       }
     }
   }
-`
+` */

@@ -23,7 +23,7 @@ export const Logo = () => {
 }
 
 export default props => (
-  <div style={{ width: "78px" }}>
+  <div style={{ width: "78px", margin:'0 auto' }}>
     <Link to="/">
       <Logo />
     </Link>

@@ -31,19 +31,19 @@ const Header = ({ siteTitle, openBasket }) => {
   return (
     <>
       <Container hideHeader={isHidden}>
-        <Column>
+        {/*  <Column>
           <NavigationDesktop />
+        </Column> */}
+        <Column style={{margin: '0 auto'}}>
+          <Logo styles={{ border: "solid", margin: '0 auto' }} />
         </Column>
-        <Column>
-          <Logo styles={{ border: "solid" }} />
-        </Column>
-        <Column>
+        {/*   <Column>
           <Button
             basket
             quantity={quantity}
             onClick={() => setOpenCart(!openCart)}
-          />
-        </Column>
+          /> 
+        </Column>*/}
       </Container>
       <ModalContainer isOpen={openCart} slideLeft={false}>
         <CartContainer closeCart={() => setOpenCart(false)} />
@@ -51,11 +51,11 @@ const Header = ({ siteTitle, openBasket }) => {
     </>
   )
 }
-
+//justify-content: space-between;
 const Container = styled.header`
   box-sizing: border-box;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   padding-left: 1rem;
   padding-right: 1rem;

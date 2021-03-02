@@ -1,7 +1,6 @@
 import PropTypes from "prop-types"
 import React from "react"
 import styled from "styled-components"
-import Footer from "../footer"
 import Header from "../header/header"
 
 const MainLayout = ({ hideFooter, children }) => {
