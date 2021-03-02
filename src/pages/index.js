@@ -24,13 +24,13 @@ const IndexPage = () => {
               title={hero.herotitle}
               fullHeight
             />
-            <IntroSection
+            {/*   <IntroSection
               title={introsection.introtitle}
               description={introsection.introdescription}
               image={introsection.introImage.localFile}
             />
            <ProductCarousel title={showcase.ptitle} description={showcase.pdescription} items={showcase.products}/>
-             {/*  <RecentPosts /> */}
+            <RecentPosts /> */}
           </MainLayout>
         )
       }}

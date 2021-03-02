@@ -9,7 +9,7 @@ const MainLayout = ({ hideFooter, children }) => {
     <>
       <Header />
       <Layout>{children}</Layout>
-      <Footer isHidden={hideFooter} />
+      {/* <Footer isHidden={hideFooter} /> */}
     </>
   )
 }
