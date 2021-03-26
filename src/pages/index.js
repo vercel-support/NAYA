@@ -18,7 +18,7 @@ const IndexPage = () => {
         const { hero, introsection, showcase } = data.wpPage
         return (
           <MainLayout>
-            <SEO title="NAYA" />
+            <SEO title="NAYAA" />
             <Hero
               hasText={true}
               desktopImage={hero.heroimagedesktop.localFile}
